@@ -28,10 +28,10 @@ def pregunta_01():
     print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
-    y_reshaped = y.reshape(139, 1)
+    y_reshaped = y.reshape(y.size, 1)
 
     # Trasforme `X` a un array de numpy usando reshape
-    X_reshaped = X.reshape(139, 1)
+    X_reshaped = X.reshape(X.size, 1)
 
     # Imprima las nuevas dimensiones de `y`
     print(y_reshaped.shape)
@@ -75,10 +75,10 @@ def pregunta_03():
     df = pd.read_csv("gm_2008_region.csv")
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df["fertility"].values.reshape(139,1)
+    X_fertility = df["fertility"].values.reshape(df["fertility"].values.size,1)
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = df["life"].values.reshape(139,1)
+    y_life = df["life"].values.reshape(df["life"].values.size,1)
 
     # Importe LinearRegression
     from sklearn.linear_model import LinearRegression
