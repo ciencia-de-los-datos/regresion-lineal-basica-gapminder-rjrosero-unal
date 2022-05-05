@@ -144,6 +144,6 @@ def pregunta_04():
     y_pred = X_test
 
     # Compute and print R^2 and RMSE
-    print("R^2: {:6.4f}".format(linearRegression.score(X_fertility, y_life)))
+    print("R^2: {:6.4f}".format(linearRegression.score(X_test, y_test)))
     rmse = np.sqrt(mean_squared_error(y_life, y_pred))
     print("Root Mean Squared Error: {:6.4f}".format(rmse))
